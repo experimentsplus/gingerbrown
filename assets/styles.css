@@ -1,0 +1,77 @@
+/*
+Purpose: Visuals for the minimal site: solid background color and simple footer.
+Behavior: Applies background color #b06500 and centers a small footer at the bottom.
+Design intent: Keep the page intentionally minimal with no content except the footer.
+*/
+:root {
+  --bg-color: #b06500;
+  --text-color: #ffffff;
+  --text-subtle: rgba(255, 255, 255, 0.9);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-color);
+  color: var(--text-subtle);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  min-height: 100vh;
+  width: min(66.667%, 600px);
+  margin-inline: auto;
+  display: grid;
+  align-content: center; /* vertical centering */
+  justify-items: start;  /* left-align children */
+  text-align: left;
+  padding: 0 16px;
+}
+
+main p {
+  line-height: 1.6;
+}
+
+/* Constrain intro paragraph to 2/3 width or max 600px */
+.intro {
+  line-height: 1.6;
+}
+
+/* Minimal spacing for icon + label links */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon-link:hover,
+.icon-link:focus-visible {
+  text-decoration: underline;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-subtle);
+}
+
+
