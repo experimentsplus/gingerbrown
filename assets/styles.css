@@ -40,6 +40,13 @@ main {
   padding: 0 16px;
 }
 
+.app-icon {
+  width: 160px;
+  max-width: 45vw;
+  height: auto;
+  margin: 24px 0 8px;
+}
+
 main p {
   line-height: 1.6;
 }
@@ -73,5 +80,3 @@ footer {
   font-size: 0.875rem;
   color: var(--text-subtle);
 }
-
-
